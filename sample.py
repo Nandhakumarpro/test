@@ -14,7 +14,6 @@ import numpy as np
 app = Flask( __name__ , template_folder = '/home/wmsmain/Documents/mongoFlask/templates' )
 app.config["MONGO_DBNAME"] = "wifiData"
 app.config["MONGO_URI"] = "mongodb://localhost:33017/wifiData"
-app.config["secretkey"] = secrets.token_urlsafe(16)
 
 mongo = PyMongo ( app )
 
