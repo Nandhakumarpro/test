@@ -1,16 +1,12 @@
 import pandas as pd
 from pandas import datetime
 import json
-#from localsWrite import localsWrite as lwrt
 Map = lambda x : x['S']
 import time
 import os
 import subprocess
-#from pandas.core.groupby.generic import DataFrameGroupBy
 from  stringInString import stringInString as S
 import mysql.connector as msc
-conn = msc.connect( host = 'localhost' , user = 'root' , password ='transpolinux', database = 'test')
-#conn = msc.connect( host = 'localhost' , user = 'admin' , password ='transpolinux', database = 'test')
 cur = conn.cursor()
 LOCALS = False
 from multiprocessing import  Pool
