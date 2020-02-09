@@ -11,12 +11,6 @@ import pickle
 import secrets
 import numpy as np
 
-app = Flask( __name__ , template_folder = '/home/wmsmain/Documents/mongoFlask/templates' )
-app.config["MONGO_DBNAME"] = "wifiData"
-app.config["MONGO_URI"] = "mongodb://localhost:33017/wifiData"
-
-mongo = PyMongo ( app )
-
 # testTable = mongo.db.testDevice
 userTable = mongo.db.userAuth
 RaspRegTable = mongo.db.RaspAuth
@@ -67,7 +61,7 @@ def updateTokenRequired(f):
       rn32= pickle.loads(request.data.get('rn32'))
       O1 = pickle.lodas(request.data.get('O1'))
       O2 = pickle.lodas(request.data.get('O2'))
-      x1 = np.linalg.solve( rn31 , O1)url= 'http://localhost:5000/getData
+      x1 = np.linalg.solve( rn31 , O1)
       x2 = np.linalg.solve(rn32 , O2)
       Count = pickle.loads(request.data.get('Count'))
       Comb = np.hstack([x1 , x2] )
