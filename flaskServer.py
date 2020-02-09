@@ -7,12 +7,7 @@ import jwt
 from functools import  wraps
 import datetime
 import time
-
-app = Flask( __name__ , template_folder = '/home/its_lab/Documents/mongoFlask/templates' )
-app.config["MONGO_DBNAME"] = "test"
-app.config["MONGO_URI"] = "mongodb://localhost:32017/test"
-app.config["secretkey"] = 'thisistheSecretKey'
-
+app = Flask( __name__ , template_folder = '/templates' )
 mongo = PyMongo ( app )
 
 testTable = mongo.db.testTable
