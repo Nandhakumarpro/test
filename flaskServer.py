@@ -9,7 +9,7 @@ import datetime
 import time
 app = Flask( __name__ , template_folder = '/templates' )
 mongo = PyMongo ( app )
-
+print  ( "This is updated " )
 testTable = mongo.db.testTable
 userTable = mongo.db.users
 
